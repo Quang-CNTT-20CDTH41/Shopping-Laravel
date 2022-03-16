@@ -47,7 +47,7 @@
 
                             <div class="form-group">
                                 <label for="">Chọn danh mục</label>
-                                <select class="select2_init js-states form-control">
+                                <select class="select2_init js-states form-control" name="category_id">
                                     <option>Chọn danh mục</option>
                                     {!! $htmlOption !!}
                                 </select>
@@ -66,13 +66,12 @@
 
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Nội dung</label>
-                                {{-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea> --}}
-                                <textarea name="content" class="form-control my-editor" rows="15" name="content">{!! old('content') !!}</textarea>
+                                <textarea name="content" class="form-control my-editor" rows="15">{!! old('content') !!}</textarea>
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Nhập tags cho sản phẩm</label>
-                                <select class="form-control tags_select_choose" multiple="multiple">
+                                <select class="form-control tags_select_choose" multiple="multiple" name="tags[]">
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Save</button>

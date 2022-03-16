@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menus', function (Blueprint $table) {
-            $table->id();
-            $table->string('image_path');
-            $table->integer('parent_id')->default(0);
-            $table->timestamps();
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('feature_image_name')->nullable();
         });
     }
 
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menus');
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('feature_image_name');
+        });
     }
 };

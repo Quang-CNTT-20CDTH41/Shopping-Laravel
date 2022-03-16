@@ -13,7 +13,6 @@ const mix = require("laravel-mix");
 
 mix.js("resources/js/app.js", "public/js")
     .js("resources/js/select2.js", "public/js")
-    .js("resources/js/tinymce.js", "public/js")
     .sass("resources/sass/app.scss", "public/css")
     .css("resources/css/app.css", "public/css")
     .css("resources/css/select2.css", "public/css")
