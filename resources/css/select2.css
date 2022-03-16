@@ -1,0 +1,10 @@
+textarea.select2-search__field {
+    border: none !important;
+}
+.select2-selection__choice__display {
+    padding-left: 10px !important;
+    color: black !important;
+}
+.select2-selection {
+    height: 36px !important;
+}
